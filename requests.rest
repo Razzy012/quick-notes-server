@@ -1,0 +1,89 @@
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "pepa4",
+    "password": "123456"
+}
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "pepa4",
+    "password": "123456"
+}
+
+###
+
+POST http://localhost:3000/api/auth/refreshToken
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZiODAxMzRjZDYyODI2ZjUzMTZkMGUiLCJ0b2tlbklkIjoiNjI2Yjg3YjM1MGViMGU3MzNhMTE2ZDE2IiwiaWF0IjoxNjUxMjE0MjU5LCJleHAiOjE2NTM4MDYyNTl9.7X7YqFkz32LFpe-QHE-PczoQVPYVRV_WKZ_61LyQcys"
+}
+
+###
+
+POST http://localhost:3000/api/auth/accessToken
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZiODAxMzRjZDYyODI2ZjUzMTZkMGUiLCJ0b2tlbklkIjoiNjI2YjhiOTQ1YjY3MjYwNDViM2Q5ODY4IiwiaWF0IjoxNjUxMjE1MjUyLCJleHAiOjE2NTM4MDcyNTJ9.RAavvc8-BJ3FipbPj6ZQ93TJCR5bhjiirB8GB5xo0TA"
+}
+
+###
+
+POST http://localhost:3000/api/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZiOGZhMzk4ZTY5ZGIxNzE2YmZkZWQiLCJ0b2tlbklkIjoiNjI2YjhmYTM5OGU2OWRiMTcxNmJmZGVlIiwiaWF0IjoxNjUxMjE2MjkxLCJleHAiOjE2NTM4MDgyOTF9.jonUu9oeBLoqyc2FjzKjraTF4d8T3reMNS8zO6FcdfM"
+}
+
+POST http://localhost:3000/api/auth/logoutAll
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZiOGZhMzk4ZTY5ZGIxNzE2YmZkZWQiLCJ0b2tlbklkIjoiNjI2YjhmYTM5OGU2OWRiMTcxNmJmZGVlIiwiaWF0IjoxNjUxMjE2MjkxLCJleHAiOjE2NTM4MDgyOTF9.jonUu9oeBLoqyc2FjzKjraTF4d8T3reMNS8zO6FcdfM"
+}
+
+###
+
+POST http://localhost:3000/api/note/addNote
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZiOGZhMzk4ZTY5ZGIxNzE2YmZkZWQiLCJpYXQiOjE2NTEyNDE4OTIsImV4cCI6MTY1MTI0MjQ5Mn0.ao7vGxLo-3HVwtggYFHAnl36PMVEK_P-0Bkxirggvx0
+
+{
+    "title": "addas",
+    "note": "loooooooool"
+}
+
+###
+
+POST http://localhost:3000/api/note/updateNote
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZiOGZhMzk4ZTY5ZGIxNzE2YmZkZWQiLCJpYXQiOjE2NTEyNDE4OTIsImV4cCI6MTY1MTI0MjQ5Mn0.ao7vGxLo-3HVwtggYFHAnl36PMVEK_P-0Bkxirggvx0
+
+{
+    "id": "626bf3d019dacf9374376657",
+    "title": "zmena hej",
+    "note": "parada"
+}
+
+###
+
+POST http://localhost:3000/api/note/deleteNote
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZiOGZhMzk4ZTY5ZGIxNzE2YmZkZWQiLCJpYXQiOjE2NTEyNDE4OTIsImV4cCI6MTY1MTI0MjQ5Mn0.ao7vGxLo-3HVwtggYFHAnl36PMVEK_P-0Bkxirggvx0
+
+{
+    "id": "626bf126abcfc7578859ab22"
+}
+
+###
+
+GET http://localhost:3000/api/note/getAllNotes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZiOGZhMzk4ZTY5ZGIxNzE2YmZkZWQiLCJpYXQiOjE2NTEyMzgyMjAsImV4cCI6MTY1MTIzODgyMH0.fnhxMGt491JQFFvt8v8ORtIVF-4fIxtj69N6hDtERkg
