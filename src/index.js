@@ -3,10 +3,13 @@ const connectToDatabase = require('./database');
 const logger = require('./logger');
 const routes = require('./routes');
 const app = express();
+const cors = require('cors');
 const port = process.env.PORT || 3000;
 
 async function startServer() {
     await connectToDatabase();
+
+    app.use( cors({ origin: '*' }) );
 
     app.use(express.json());
 
